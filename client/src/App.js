@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Project from "./components/Project/Project";
+import { ProjectsContext } from "./projectsContext";
 
 function App() {
+  const { projects } = useContext(ProjectsContext)
+
   return (
     <BrowserRouter>
-      <div>
-        <Route exact path="/">
-          <Home />
-          {/* home page */}
-        </Route>
-      </div>
+      {projects.map((project) => {
+        return (
+          <Route exact path={`/${project.title.replace(/\s/g, '')}`}>
+            <Project title={project.title} />
+          </Route>
+        )
+      })}
+
+      <Route exact path="/">
+        <Home />
+      </Route>
     </BrowserRouter>
+    
   );
 }
 

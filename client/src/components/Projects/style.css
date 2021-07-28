@@ -6,35 +6,11 @@
     flex-direction: column;
     padding: 1vh 0;
 }
+
 #projectsTitle {
     width: 100%;
     font-size: 200%;
     color: var(--text-color);
     text-align: center;
     padding: 1vh 0;text-decoration: underline;
-}
-
-.project{
-    width: 98%;
-    margin: 1%;
-    min-height: 40vh;
-    font-size: 150%;
-}
-
-#project1{
-    background-image: url("./../../assets/images/sunset.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#project2{
-    background-image: url("./../../assets/images/sunset.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#project3{
-    background-image: url("./../../assets/images/sunset.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
